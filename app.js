@@ -6,7 +6,7 @@ const getQuote = () => {
         .then((data) => {
             quote.innerHTML = data.content
         })
-    fetch ('https://picsum.photos/1600/1000')
+    fetch ('https://picsum.photos/375/1000')
     .then((res) => {
         document.getElementById('pic').innerHTML = `<img src=${res.url} />`
     })
