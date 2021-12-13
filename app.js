@@ -1,4 +1,5 @@
 const quote = document.getElementById('quote')
+const text = document.querySelector('.text')
 
 const getQuote = () => {
     fetch ('https://api.quotable.io/random')
@@ -6,7 +7,7 @@ const getQuote = () => {
         .then((data) => {
             quote.innerHTML = data.content
         })
-    fetch ('https://picsum.photos/375/1000')
+    fetch ('https://picsum.photos/380/1000')
     .then((res) => {
         document.getElementById('pic').innerHTML = `<img src=${res.url} />`
     })
@@ -14,5 +15,8 @@ const getQuote = () => {
 
 
 
-quote.onclick = () => getQuote();
+quote.onclick = () => {
+    getQuote();
+    text.classList.add('disappear');
+};
 getQuote();
